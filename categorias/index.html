@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Definir la codificación de caracteres -->
+    <meta charset="utf-8">
+    <!-- Configurar la vista para dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Título de la página -->
+    <title>Módulo de Categorías</title>
+    <!-- Favicon de la página -->
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <!-- Incluir la hoja de estilos de Bootstrap para el diseño responsivo -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Incluir la hoja de estilos de DataTables para la tabla -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Contenedor principal con margen superior -->
+    <div class="container mt-5">
+        <!-- Fila para centrar el contenido -->
+        <div class="row justify-content-center mb-5">
+            <!-- Columna para centrar la tabla y el botón -->
+            <div class="col-lg-6">
+                <!-- Título de la sección -->
+                <h1>🧵 Módulo de Categorías</h1>
+                <!-- Botón para abrir el modal de creación/edición de categorías -->
+                <button id="crearCategoriaBtn" type="button" class="btn btn-primary mb-3" data-toggle="modal"
+                    data-target="#categoriaModal">
+                    <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                    Crear Categoría
+                </button>
+                <!-- Tabla para mostrar las categorías -->
+                <table id="categoriaTable" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <!-- Encabezados de las columnas de la tabla -->
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Cuerpo de la tabla donde se llenarán los datos dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para crear/editar categorías -->
+    <div class="modal fade" id="categoriaModal" tabindex="-1" role="dialog" aria-labelledby="categoriaModalLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Título del modal -->
+                    <h5 class="modal-title" id="categoriaModalLabel">⚙ Categoría</h5>
+                    <!-- Botón para cerrar el modal -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario dentro del modal -->
+                    <form id="categoriaForm">
+                        <span style="justify-content: center; width: 100%; display: none;" id="barra">
+                            <img style="width: 100%;" src="../images/barra.gif" alt="Procesando..." />
+                        </span>
+                        <!-- Campo oculto para el ID de la categoría -->
+                        <input type="hidden" id="categoriaId" name="id">
+                        <!-- Campo para ingresar el nombre de la categoría -->
+                        <div class="form-group">
+                            <label for="categoriaNombre">Nombre</label>
+                            <input type="text" class="form-control" id="categoriaNombre" name="categoriaNombre" required
+                                autocomplete="off">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- Botón para cerrar el modal -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fa-regular fa-circle-xmark" aria-hidden=true></i> Cerrar</button>
+                    <!-- Botón para guardar la categoría -->
+                    <button type="button" class="btn btn-primary" id="guardarCategoria">
+                        <i class="fa-regular fa-save" aria-hidden=true></i> Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <!-- Enlace al sitio web con logotipo -->
+            <a href="https://stackcodelab.com" class="text-white" target="_blank"><img src="../images/logotipo.png"
+                    width="50px">
+                <p>&copy; 2024 StackCodeLab.com
+            </a>
+            <!-- Texto de derechos reservados -->
+            Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Incluir la biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Incluir la biblioteca SweetAlert2 para notificaciones -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Incluir la biblioteca DataTables para funcionalidades avanzadas en tablas -->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!-- Incluir la biblioteca Bootstrap para componentes interactivos -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Incluir el archivo JS específico para la funcionalidad de categorías -->
+    <script src="categorias.js" defer></script>
+</body>
+
+</html>
