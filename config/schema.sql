@@ -7,8 +7,8 @@
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
--- CREATE DATABASE pos;
--- USE pos;
+CREATE DATABASE pos;
+USE pos;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;

@@ -12,9 +12,9 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
 // remoto
 if (($_SERVER['SERVER_NAME'] == 'stackcodelab.com') or ($_SERVER['SERVER_NAME'] == 'www.stackcodelab.com')) {
     $servername = "localhost"; // Cambia esto si es necesario, es el nombre del servidor de la base de datos
-    $username = "stackcod_operador"; // Cambia esto por tu usuario de la base de datos
-    $password = "1234567890qwerty"; // Cambia esto por tu contraseña de la base de datos
-    $dbname = "stackcod_pos"; // Cambia esto por el nombre de tu base de datos
+    $username = "root"; // Cambia esto por tu usuario de la base de datos
+    $password = ""; // Cambia esto por tu contraseña de la base de datos
+    $dbname = "pos"; // Cambia esto por el nombre de tu base de datos
 }
 
 try {
